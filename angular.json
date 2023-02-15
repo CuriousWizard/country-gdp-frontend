@@ -50,6 +50,7 @@
               "src/assets"
             ],
             "styles": [
+              "primeng/resources/themes/bootstrap4-light-blue/theme.css",
               "src/styles.css"
             ],
             "scripts": []
