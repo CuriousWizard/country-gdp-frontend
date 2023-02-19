@@ -1,1 +1,26 @@
-<p>detail works!</p>
+<div class="DetailComp">
+    <p-card header="Details">
+        <ng-template pTemplate="header">
+            <div class="flex justify-content-start align-items-center">
+                <a [routerLink]="['/list']">
+                    <button pButton type="button" icon="pi pi-arrow-left" label="Return to list" class="p-button-rounded p-button-secondary p-button-text"></button>
+                </a>
+            </div>
+        </ng-template>
+        <div class="grid">
+            <div class="col-12 md:col-6 lg:col-3">
+                <p><strong>Country Name:</strong> {{selectedCountry?.countryName}}</p>
+            </div>
+            <div class="col-12 md:col-6 lg:col-3">
+                <p><strong>Country Code:</strong> {{selectedCountry?.countryCode}}</p>
+            </div>
+            <div class="col-12 md:col-6 lg:col-3">
+                <p><strong>Year:</strong> {{selectedCountry?.year | date:'yyyy'}}</p>
+            </div>
+            <div class="col-12 md:col-6 lg:col-3">
+                <p><strong>Value:</strong> {{selectedCountry?.value | currency:'USD':'symbol'}}</p>
+            </div>
+        </div>
+        <p-chart type="bar" [data]="chartData"></p-chart>
+    </p-card>
+</div>
